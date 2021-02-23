@@ -18,26 +18,26 @@ void initialize_game(void)
     //category 1
     
     strcpy(questions[0].category, categories[0]);
-    strcpy(questions[0].question, "What language is Linux written in?");
-    strcpy(questions[0].answer, "C");
+    strcpy(questions[0].question, "This is the language Linux is written in.");
+    strcpy(questions[0].answer, "What is C language?");
     questions[0].value = 100;
     questions[0].answered = false;
 
     strcpy(questions[1].category, categories[0]);
-    strcpy(questions[1].question, "What's the most popular language?");
-    strcpy(questions[1].answer, "Javascript");
+    strcpy(questions[1].question, "This is the most popular language.");
+    strcpy(questions[1].answer, "What is Javascript?");
     questions[1].value = 200;
     questions[1].answered = false;
 
     strcpy(questions[2].category, categories[0]);
-    strcpy(questions[2].question, "What language is emacs written in?");
-    strcpy(questions[2].answer, "Emacs Lisp");
+    strcpy(questions[2].question, "This is the language Emacs is written in.");
+    strcpy(questions[2].answer, "What is Emacs Lisp");
     questions[2].value = 300;
     questions[2].answered = false;
 
     strcpy(questions[3].category, categories[0]);
-    strcpy(questions[3].question, "What is the relationship between Java and Javascript??");
-    strcpy(questions[3].answer, "Only some syntax. They are unrelated.");
+    strcpy(questions[3].question, "This is the organization that specifies CSS.");
+    strcpy(questions[3].answer, "What is the CSS Working Group?");
     questions[3].value = 500;
     questions[3].answered = false;
     
