@@ -71,7 +71,7 @@ void initialize_game(void)
 
 
     strcpy(questions[10].category, categories[2]);
-    strcpy(questions[10].question, "What are Primary keys unique for each tables?");
+    strcpy(questions[10].question, "Are Primary keys unique for each tables?");
     strcpy(questions[10].answer, "YES");
     questions[10].value = 300;
     questions[10].answered = false;
