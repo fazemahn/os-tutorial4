@@ -37,6 +37,33 @@ void initialize_game(void)
     questions[3].value = 500;
     questions[3].answered = false;
     // initialize each question struct and assign it to the questions array
+    
+    
+    // Part 3
+    strcpy(questions[0].category, categories[2]);
+    strcpy(questions[0].question, "What does DBMS stand for?");
+    strcpy(questions[0].answer, "Database Management System");
+    questions[0].value = 100;
+    questions[0].answered = false;
+
+    strcpy(questions[1].category, categories[2]);
+    strcpy(questions[1].question, "What does SQL stand for ?");
+    strcpy(questions[1].answer, "Structured Query language");
+    questions[1].value = 200;
+    questions[1].answered = false;
+
+
+    strcpy(questions[2].category, categories[2]);
+    strcpy(questions[2].question, "What are Primary keys unique for each tables?");
+    strcpy(questions[2].answer, "YES");
+    questions[2].value = 300;
+    questions[2].answered = false;
+
+    strcpy(questions[4].category, categories[2]);
+    strcpy(questions[4].question, "What is a 'tuple'?");
+    strcpy(questions[4].answer, "a tuple is one record in a row");
+    questions[4].value = 500;
+    questions[4].answered = false;
 }
 
 // Displays each of the remaining categories and question dollar values that have not been answered
