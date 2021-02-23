@@ -22,14 +22,20 @@ void initialize_game(void)
     strcpy(questions[1].category, categories[0]);
     strcpy(questions[1].question, "What's the most popular language?");
     strcpy(questions[1].answer, "Javascript");
-    questions[1].value = 300;
+    questions[1].value = 200;
     questions[1].answered = false;
 
-    strcpy(questions[0].category, categories[0]);
-    strcpy(questions[0].question, "What language is emacs written in?");
-    strcpy(questions[0].answer, "Emacs Lisp");
-    questions[0].value = 500;
-    questions[0].answered = false;
+    strcpy(questions[2].category, categories[0]);
+    strcpy(questions[2].question, "What language is emacs written in?");
+    strcpy(questions[2].answer, "Emacs Lisp");
+    questions[2].value = 300;
+    questions[2].answered = false;
+
+    strcpy(questions[3].category, categories[0]);
+    strcpy(questions[3].question, "What is the relationship between Java and Javascript??");
+    strcpy(questions[3].answer, "Only some syntax. They are unrelated.");
+    questions[3].value = 500;
+    questions[3].answered = false;
     // initialize each question struct and assign it to the questions array
 }
 
