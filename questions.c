@@ -13,6 +13,23 @@
 // Initializes the array of questions for the game
 void initialize_game(void)
 {
+    strcpy(questions[0].category, categories[0]);
+    strcpy(questions[0].question, "What language is Linux written in?");
+    strcpy(questions[0].answer, "C");
+    questions[0].value = 100;
+    questions[0].answered = false;
+
+    strcpy(questions[1].category, categories[0]);
+    strcpy(questions[1].question, "What's the most popular language?");
+    strcpy(questions[1].answer, "Javascript");
+    questions[1].value = 300;
+    questions[1].answered = false;
+
+    strcpy(questions[0].category, categories[0]);
+    strcpy(questions[0].question, "What language is emacs written in?");
+    strcpy(questions[0].answer, "Emacs Lisp");
+    questions[0].value = 500;
+    questions[0].answered = false;
     // initialize each question struct and assign it to the questions array
 }
 
