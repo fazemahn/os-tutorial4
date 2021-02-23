@@ -13,6 +13,10 @@
 // Initializes the array of questions for the game
 void initialize_game(void)
 {
+    // initialize each question struct and assign it to the questions array
+    
+    //category 1
+    
     strcpy(questions[0].category, categories[0]);
     strcpy(questions[0].question, "What language is Linux written in?");
     strcpy(questions[0].answer, "C");
@@ -36,9 +40,22 @@ void initialize_game(void)
     strcpy(questions[3].answer, "Only some syntax. They are unrelated.");
     questions[3].value = 500;
     questions[3].answered = false;
-    // initialize each question struct and assign it to the questions array
     
+     //category 2
     
+    strcpy(questions[5].category, categories[1]);
+    strcpy(questions[5].question, "It is known as the best algorithm for sorting");
+    strcpy(questions[5].answer, "What is Quick Sort?");
+    questions[5].value = 100;
+    questions[5].answered = false;
+    
+    strcpy(questions[6].category, categories[1]);
+    strcpy(questions[6].question, "A sorting algorithm that is based on the divide and conquer technique.");
+    strcpy(questions[6].answer, "What is Merge Sort?");
+    questions[6].value = 200;
+    questions[6].answered = false;
+    
+  
     // Part 3
     strcpy(questions[8].category, categories[2]);
     strcpy(questions[8].question, "What does DBMS stand for?");
