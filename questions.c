@@ -55,6 +55,18 @@ void initialize_game(void)
     questions[6].value = 200;
     questions[6].answered = false;
     
+    strcpy(questions[7].category, categories[1]);
+    strcpy(questions[7].question, "A greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.");
+    strcpy(questions[7].answer, "Prim's Algorithm");
+    questions[7].value = 300;
+    questions[7].answered = false;
+    
+    strcpy(questions[8].category, categories[1]);
+    strcpy(questions[8].question, "An algorithm for traversing or searching tree or graph data structures");
+    strcpy(questions[8].answer, "What is Depth-first search (DFS) ");
+    questions[8].value = 500;
+    questions[8].answered = false;
+    
   
     // Part 3
     strcpy(questions[8].category, categories[2]);
