@@ -43,32 +43,32 @@ void initialize_game(void)
     
      //category 2
     
+    strcpy(questions[4].category, categories[1]);
+    strcpy(questions[4].question, "It is known as the best algorithm for sorting");
+    strcpy(questions[4].answer, "What is Quick Sort?");
+    questions[4].value = 100;
+    questions[4].answered = false;
+    
     strcpy(questions[5].category, categories[1]);
-    strcpy(questions[5].question, "It is known as the best algorithm for sorting");
-    strcpy(questions[5].answer, "What is Quick Sort?");
-    questions[5].value = 100;
+    strcpy(questions[5].question, "A sorting algorithm that is based on the divide and conquer technique.");
+    strcpy(questions[5].answer, "What is Merge Sort?");
+    questions[5].value = 200;
     questions[5].answered = false;
     
     strcpy(questions[6].category, categories[1]);
-    strcpy(questions[6].question, "A sorting algorithm that is based on the divide and conquer technique.");
-    strcpy(questions[6].answer, "What is Merge Sort?");
-    questions[6].value = 200;
+    strcpy(questions[6].question, "A greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.");
+    strcpy(questions[6].answer, "Prim's Algorithm");
+    questions[6].value = 300;
     questions[6].answered = false;
     
     strcpy(questions[7].category, categories[1]);
-    strcpy(questions[7].question, "A greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.");
-    strcpy(questions[7].answer, "Prim's Algorithm");
-    questions[7].value = 300;
+    strcpy(questions[7].question, "An algorithm for traversing or searching tree or graph data structures");
+    strcpy(questions[7].answer, "What is Depth-first search (DFS) ");
+    questions[7].value = 500;
     questions[7].answered = false;
-    
-    strcpy(questions[8].category, categories[1]);
-    strcpy(questions[8].question, "An algorithm for traversing or searching tree or graph data structures");
-    strcpy(questions[8].answer, "What is Depth-first search (DFS) ");
-    questions[8].value = 500;
-    questions[8].answered = false;
-    
   
-    // Part 3
+    // category 3
+
     strcpy(questions[8].category, categories[2]);
     strcpy(questions[8].question, "What does DBMS stand for?");
     strcpy(questions[8].answer, "Database Management System");
