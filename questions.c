@@ -19,25 +19,25 @@ void initialize_game(void)
     
     strcpy(questions[0].category, categories[0]);
     strcpy(questions[0].question, "This is the language Linux is written in.");
-    strcpy(questions[0].answer, "What is C language?");
+    strcpy(questions[0].answer, "C");
     questions[0].value = 100;
     questions[0].answered = false;
 
     strcpy(questions[1].category, categories[0]);
     strcpy(questions[1].question, "This is the most popular language.");
-    strcpy(questions[1].answer, "What is Javascript?");
+    strcpy(questions[1].answer, "Javascript");
     questions[1].value = 200;
     questions[1].answered = false;
 
     strcpy(questions[2].category, categories[0]);
     strcpy(questions[2].question, "This is the language Emacs is written in.");
-    strcpy(questions[2].answer, "What is Emacs Lisp");
+    strcpy(questions[2].answer, "Emacs Lisp");
     questions[2].value = 300;
     questions[2].answered = false;
 
     strcpy(questions[3].category, categories[0]);
     strcpy(questions[3].question, "This is the organization that specifies CSS.");
-    strcpy(questions[3].answer, "What is the CSS Working Group?");
+    strcpy(questions[3].answer, "CSS Working Group");
     questions[3].value = 500;
     questions[3].answered = false;
     
@@ -90,7 +90,7 @@ void initialize_game(void)
 
     strcpy(questions[11].category, categories[2]);
     strcpy(questions[11].question, "What is one record in a row?");
-    strcpy(questions[11].answer, Tuple");
+    strcpy(questions[11].answer, "Tuple");
     questions[11].value = 500;
     questions[11].answered = false;
 }
