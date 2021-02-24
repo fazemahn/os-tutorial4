@@ -110,7 +110,10 @@ void display_categories(void)
 void display_question(char *category, int value)
 {
     if (strcmp(categories[0], category) == 0){
-        
+        for (int i = 0; i<4; i++){
+            if (!questions[i].answered && questions[i].value == value)
+            printf("%s", questions[i].question);
+        }
     } 
     else if (strcmp(categories[1], category) == 0){
     }
