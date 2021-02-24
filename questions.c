@@ -121,7 +121,7 @@ void display_question(char *category, int value)
             printf("%s", questions[i].question);
         }
     }
-else if (strcmp(categories[2], category) == 0)
+    else if (strcmp(categories[2], category) == 0)
     {
     	for (int i = 8; i < 12; i++)
     	{
@@ -159,7 +159,7 @@ bool valid_answer(char *category, int value, char *answer)
             printf("%s", questions[i].question);
         }
     }
-else if (strcmp(categories[2], category) == 0)
+    else if (strcmp(categories[2], category) == 0)
     {
     	for (int i = 8; i < 12; i++)
     	{
@@ -175,6 +175,28 @@ else if (strcmp(categories[2], category) == 0)
 // Returns true if the question has already been answered
 bool already_answered(char *category, int value)
 {
+    // return true if the 'answered' member is true for any question. 
+    if (strcmp(categories[0], category) == 0){
+        for (int i = 0; i<4; i++){
+            if (questions[i].answered && questions[i].value == value)
+            return true;
+        }
+    } 
+    else if (strcmp(categories[1], category) == 0){
+        for (int i = 4; i<8; i++){
+            if (questions[i].answered && questions[i].value == value)
+            return true;
+        }
+    }
+    else if (strcmp(categories[2], category) == 0)
+    {
+    	for (int i = 8; i < 12; i++)
+    	{
+            if (questions[i].answered && questions[i].value == value)
+            return true;
+        }	
+
+    }
     // lookup the question and see if it's already been marked as answered
     return false;
 }
