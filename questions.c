@@ -69,28 +69,28 @@ void initialize_game(void)
   
     // category 3
 
-    strcpy(questions[8].category, categories[2]);
-    strcpy(questions[8].question, "What does DBMS stand for?");
-    strcpy(questions[8].answer, "Database Management System");
+   strcpy(questions[8].category, categories[2]);
+    strcpy(questions[8].question, "Properties that describe the characteristics of entities are called?");
+    strcpy(questions[8].answer, "what are attributes?");
     questions[8].value = 100;
     questions[8].answered = false;
 
     strcpy(questions[9].category, categories[2]);
-    strcpy(questions[9].question, "What does SQL stand for ?");
+    strcpy(questions[9].question, "This language used to process Query and create/edit tables?");
     strcpy(questions[9].answer, "Structured Query language");
     questions[9].value = 200;
     questions[9].answered = false;
 
 
     strcpy(questions[10].category, categories[2]);
-    strcpy(questions[10].question, "Are Primary keys unique for each tables?");
-    strcpy(questions[10].answer, "YES");
+    strcpy(questions[10].question, "The key used to identify a single row in a tabel?");
+    strcpy(questions[10].answer, "Definiation of Primary key");
     questions[10].value = 300;
     questions[10].answered = false;
 
     strcpy(questions[11].category, categories[2]);
-    strcpy(questions[11].question, "What is a 'tuple'?");
-    strcpy(questions[11].answer, "a tuple is one record in a row");
+    strcpy(questions[11].question, "What is one record in a row?");
+    strcpy(questions[11].answer, "A tuple");
     questions[11].value = 500;
     questions[11].answered = false;
 }
