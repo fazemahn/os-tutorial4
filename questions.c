@@ -116,6 +116,10 @@ void display_question(char *category, int value)
         }
     } 
     else if (strcmp(categories[1], category) == 0){
+        for (int i = 4; i<8; i++){
+            if (!questions[i].answered && questions[i].value == value)
+            printf("%s", questions[i].question);
+        }
     }
     else if (strcmp(categories[2], category) == 0){
     }
