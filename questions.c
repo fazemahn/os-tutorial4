@@ -45,13 +45,13 @@ void initialize_game(void)
     
     strcpy(questions[4].category, categories[1]);
     strcpy(questions[4].question, "It is known as the best algorithm for sorting");
-    strcpy(questions[4].answer, "What is Quick Sort?");
+    strcpy(questions[4].answer, "Quick Sort?");
     questions[4].value = 100;
     questions[4].answered = false;
     
     strcpy(questions[5].category, categories[1]);
     strcpy(questions[5].question, "A sorting algorithm that is based on the divide and conquer technique.");
-    strcpy(questions[5].answer, "What is Merge Sort?");
+    strcpy(questions[5].answer, "Merge Sort?");
     questions[5].value = 200;
     questions[5].answered = false;
     
@@ -63,7 +63,7 @@ void initialize_game(void)
     
     strcpy(questions[7].category, categories[1]);
     strcpy(questions[7].question, "An algorithm for traversing or searching tree or graph data structures");
-    strcpy(questions[7].answer, "What is Depth-first search (DFS) ");
+    strcpy(questions[7].answer, "Depth-first search");
     questions[7].value = 500;
     questions[7].answered = false;
   
@@ -76,7 +76,7 @@ void initialize_game(void)
     questions[8].answered = false;
 
     strcpy(questions[9].category, categories[2]);
-    strcpy(questions[9].question, "This language used to process Query and create/edit tables?");
+    strcpy(questions[9].question, "The language used to process Query and create/edit tables?");
     strcpy(questions[9].answer, "SQL");
     questions[9].value = 200;
     questions[9].answered = false;
