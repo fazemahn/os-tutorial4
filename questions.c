@@ -98,13 +98,24 @@ void initialize_game(void)
 // Displays each of the remaining categories and question dollar values that have not been answered
 void display_categories(void)
 {
+    for (int i =0; i<NUM_QUESTIONS; i++){
+        if (!questions[i].answered){
+            printf("%s : %d", questions[i].question, questions[i].value);
+        }
+    }
     // print categories and dollar values for each unanswered question in questions array
 }
 
 // Displays the question for the category and dollar value
 void display_question(char *category, int value)
 {
-
+    if (strcmp(categories[0], category) == 0){
+        
+    } 
+    else if (strcmp(categories[1], category) == 0){
+    }
+    else if (strcmp(categories[2], category) == 0){
+    }
 }
 
 // Returns true if the answer is correct for the question for that category and dollar value
