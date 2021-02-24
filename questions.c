@@ -18,13 +18,13 @@ void initialize_game(void)
     //category 1
     
     strcpy(questions[0].category, categories[0]);
-    strcpy(questions[0].question, "This is the language Linux is written in.");
+    strcpy(questions[0].question, "This is the language Linux is written in.\n");
     strcpy(questions[0].answer, "C");
     questions[0].value = 100;
     questions[0].answered = false;
 
     strcpy(questions[1].category, categories[0]);
-    strcpy(questions[1].question, "This is the most popular language.");
+    strcpy(questions[1].question, "This is the most popular language.\n");
     strcpy(questions[1].answer, "Javascript");
     questions[1].value = 200;
     questions[1].answered = false;
@@ -84,7 +84,7 @@ void initialize_game(void)
 
     strcpy(questions[10].category, categories[2]);
     strcpy(questions[10].question, "The key used to identify a single row in a tabel?");
-    strcpy(questions[10].answer, "Primary key");
+    strcpy(questions[10].answer, "Primary-key");
     questions[10].value = 300;
     questions[10].answered = false;
 
@@ -98,10 +98,8 @@ void initialize_game(void)
 // Displays each of the remaining categories and question dollar values that have not been answered
 void display_categories(void)
 {
-    for (int i =0; i<NUM_QUESTIONS; i++){
-        if (!questions[i].answered){
-            printf("%s : %d", questions[i].question, questions[i].value);
-        }
+    for (int i =0; i<NUM_CATEGORIES; i++){
+        printf("%s \n", categories[i]);
     }
     // print categories and dollar values for each unanswered question in questions array
 }
@@ -109,10 +107,13 @@ void display_categories(void)
 // Displays the question for the category and dollar value
 void display_question(char *category, int value)
 {
-    if (strcmp(categories[0], category) == 0){
+    printf("inside: %s \n", category);
+    printf(" %d ", strcmp(categories[0], category));
+    if (strcmp(categories[0], category) == 80){
+        printf("inside sqqq: %s \n", category);
         for (int i = 0; i<4; i++){
             if (!questions[i].answered && questions[i].value == value)
-            printf("%s", questions[i].question);
+            printf("%s \n", questions[i].question);
         }
     } 
     else if (strcmp(categories[1], category) == 0){
@@ -135,36 +136,24 @@ void display_question(char *category, int value)
 // Returns true if the answer is correct for the question for that category and dollar value
 bool valid_answer(char *category, int value, char *answer)
 {
-    if (strcmp(categories[0], category) == 0){
+    if (strcmp(categories[0], category) == 80){
         for (int i = 0; i<4; i++){
-            if (!questions[i].answered && questions[i].value == value){
-                // Get the length of the correct answer
-                int len = strlen(questions[i].answer);
-                int start = 0; 
-                int end = start + len;
-                // Scan the user's answer for a substring matching the length of the correct answer. 
-                while(end<strlen(questions[i].answer)){
-                    if(strcmp(answer, substring(questions[i].answer,start,end )) == 0)
-                    // If such a string is found, and matches the correct answer, return true.
-                    return true;
-                    start++;
-                    end++;
-                }
-            }
+            if (questions[i].answered==false && questions[i].value == value && strcmp(questions[i].answer, answer)==0)
+            return true;
         }
     } 
     else if (strcmp(categories[1], category) == 0){
         for (int i = 4; i<8; i++){
-            if (!questions[i].answered && questions[i].value == value)
-            printf("%s", questions[i].question);
+            if (!questions[i].answered && questions[i].value == value && strcmp(questions[i].answer, answer)==0)
+            return true;
         }
     }
     else if (strcmp(categories[2], category) == 0)
     {
     	for (int i = 8; i < 12; i++)
     	{
-            if (!questions[i].answered && questions[i].value == value)
-            printf("%s", questions[i].question);
+            if (!questions[i].answered && questions[i].value == value && strcmp(questions[i].answer, answer)==0)
+            return true;
         }	
 
     }
@@ -199,15 +188,4 @@ bool already_answered(char *category, int value)
     }
     // lookup the question and see if it's already been marked as answered
     return false;
-}
-// C substring function definition
-char* substring(char s[], int p, int l) {
-   int c = 0;
-   char sub [100];
-   while (c < l) {
-      sub[c] = s[p+c-1];
-      c++;
-   }
-   sub[c] = '\0';
-   return sub;
 }
