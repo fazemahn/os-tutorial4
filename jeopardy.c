@@ -38,15 +38,25 @@ int main(int argc, char *argv[])
     initialize_game();
 
     // Prompt for players names
+    for (int i = 0; i < NUM_PLAYERS; i++){
+        players[i].score = 0;
+        gets(players[i].name);
+    }
+
+    //Variable to check if all questions are answered. 
+    bool cont = true;
     
-    // initialize each of the players in the array
-
     // Perform an infinite loop getting command input from users until game ends
-    while (fgets(buffer, BUFFER_LEN, stdin) != NULL)
+    while (fgets(buffer, BUFFER_LEN, stdin) != NULL && cont)
     {
+        cont = false;
         // Call functions from the questions and players source files
+        for (int i = 0; i < NUM_QUESTIONS; i++)
+        if (!questions[i].answered)
+        cont = true;
 
-        // Execute the game until all questions are answered
+        //Game Logic is executed. 
+        
 
         // Display the final results and exit
     }
