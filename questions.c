@@ -135,7 +135,40 @@ else if (strcmp(categories[2], category) == 0)
 // Returns true if the answer is correct for the question for that category and dollar value
 bool valid_answer(char *category, int value, char *answer)
 {
-    // Look into string comparison functions
+    if (strcmp(categories[0], category) == 0){
+        for (int i = 0; i<4; i++){
+            if (!questions[i].answered && questions[i].value == value){
+                // Get the length of the correct answer
+                int len = strlen(questions[i].answer);
+                int start = 0; 
+                int end = start + len;
+                // Scan the user's answer for a substring matching the length of the correct answer. 
+                while(end<strlen(questions[i].answer)){
+                    if(strcmp(answer, substring(questions[i].answer,start,end )) == 0)
+                    // If such a string is found, and matches the correct answer, return true.
+                    return true;
+                    start++;
+                    end++;
+                }
+            }
+        }
+    } 
+    else if (strcmp(categories[1], category) == 0){
+        for (int i = 4; i<8; i++){
+            if (!questions[i].answered && questions[i].value == value)
+            printf("%s", questions[i].question);
+        }
+    }
+else if (strcmp(categories[2], category) == 0)
+    {
+    	for (int i = 8; i < 12; i++)
+    	{
+            if (!questions[i].answered && questions[i].value == value)
+            printf("%s", questions[i].question);
+        }	
+
+    }
+    // Else, simply return false. 
     return false;
 }
 
@@ -144,4 +177,15 @@ bool already_answered(char *category, int value)
 {
     // lookup the question and see if it's already been marked as answered
     return false;
+}
+// C substring function definition
+char* substring(char s[], int p, int l) {
+   int c = 0;
+   char sub [100];
+   while (c < l) {
+      sub[c] = s[p+c-1];
+      c++;
+   }
+   sub[c] = '\0';
+   return sub;
 }
