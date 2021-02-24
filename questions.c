@@ -69,28 +69,28 @@ void initialize_game(void)
   
     // category 3
 
-   strcpy(questions[8].category, categories[2]);
+       strcpy(questions[8].category, categories[2]);
     strcpy(questions[8].question, "Properties that describe the characteristics of entities are called?");
-    strcpy(questions[8].answer, "what are attributes?");
+    strcpy(questions[8].answer, "Attributes");
     questions[8].value = 100;
     questions[8].answered = false;
 
     strcpy(questions[9].category, categories[2]);
     strcpy(questions[9].question, "This language used to process Query and create/edit tables?");
-    strcpy(questions[9].answer, "Structured Query language");
+    strcpy(questions[9].answer, "SQL");
     questions[9].value = 200;
     questions[9].answered = false;
 
 
     strcpy(questions[10].category, categories[2]);
     strcpy(questions[10].question, "The key used to identify a single row in a tabel?");
-    strcpy(questions[10].answer, "Definiation of Primary key");
+    strcpy(questions[10].answer, "Primary key");
     questions[10].value = 300;
     questions[10].answered = false;
 
     strcpy(questions[11].category, categories[2]);
     strcpy(questions[11].question, "What is one record in a row?");
-    strcpy(questions[11].answer, "A tuple");
+    strcpy(questions[11].answer, Tuple");
     questions[11].value = 500;
     questions[11].answered = false;
 }
@@ -121,7 +121,14 @@ void display_question(char *category, int value)
             printf("%s", questions[i].question);
         }
     }
-    else if (strcmp(categories[2], category) == 0){
+else if (strcmp(categories[2], category) == 0)
+    {
+    	for (int i = 8; i < 12; i++)
+    	{
+            if (!questions[i].answered && questions[i].value == value)
+            printf("%s", questions[i].question);
+        }	
+
     }
 }
 
