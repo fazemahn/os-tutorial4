@@ -19,11 +19,16 @@
 
 // Put global environment variables here
 
+// We implemented this function within the questions.c.
 // Processes the answer from the user containing what is or who is and tokenizes it to retrieve the answer.
 void tokenize(char *input, char **tokens);
 
 // Displays the game results for each player, their name and final score, ranked from first to last place
-void show_results(player *players, int num_players);
+void show_results(player *players, int num_players){
+    for (int i = 0; i < num_players; i++){
+        printf("Player: %s Score: %d", players[i].name, players[i].score);
+    }
+};
 
 
 int main(int argc, char *argv[])
@@ -75,6 +80,7 @@ int main(int argc, char *argv[])
         }
         // Display the final results and exit
         turn ++;
+        show_results();
     }
     return EXIT_SUCCESS;
 }
